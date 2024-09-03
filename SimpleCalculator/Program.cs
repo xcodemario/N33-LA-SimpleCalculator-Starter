@@ -13,7 +13,7 @@ namespace SimpleCalculator
 
                 // Class to perform actual calculations
                 CalculatorEngine calculatorEngine = new CalculatorEngine();
-
+                
                 double firstNumber = inputConverter.ConvertInputToNumeric(Console.ReadLine());
                 double secondNumber = inputConverter.ConvertInputToNumeric(Console.ReadLine());
                 string operation = Console.ReadLine();

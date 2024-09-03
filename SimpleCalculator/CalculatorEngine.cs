@@ -8,10 +8,11 @@ namespace SimpleCalculator
         {
             double result = 0;
 
-            if (argOperation == "+" || argOperation.ToLower() == "add") {
+            switch (argOperation == "+" || argOperation.ToLower() == "add") {
                 result = argFirstNumber + argSecondNumber;
             }
-
+            //own dll
+            //switch case
             return result;
         }
     }
