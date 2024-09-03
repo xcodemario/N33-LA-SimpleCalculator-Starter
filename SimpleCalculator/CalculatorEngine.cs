@@ -35,7 +35,7 @@ namespace SimpleCalculator
                 case "power to":
                 case "power of":
                 case "exponent":
-
+                    result = Math.Pow(argFirstNumber, argSecondNumber);
                     break;
 
             }
