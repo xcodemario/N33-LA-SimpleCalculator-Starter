@@ -12,7 +12,7 @@
 
 12. Jake did the first attempt at doing a human readable output. (change 3)
 
-13.Amine added the ^ for the valid operation method
+13. Amine added the ^ for the valid operation method
 
 14. Code formatting by Jake
 
@@ -24,6 +24,8 @@
 
 22-25. Amine worked on the String output, using at first StringBuilder then to StringFormat
 
-26-27. Edited the testing, until it worked, i forgot to put a 0 while trying to test for division by 0.
+26-27. Jake edited the testing, until it worked, i forgot to put a 0 while trying to test for division by 0.
 
-28. Made the format go to 2 decimal places.
+28. Jake made the format go to 2 decimal places.
+
+29-30. Jake Added a README.
