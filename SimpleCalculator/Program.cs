@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace SimpleCalculator
 {
     class Program
@@ -18,7 +19,7 @@ namespace SimpleCalculator
 
                 double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
 
-                Console.WriteLine(firstNumber + operation + secondNumber + " is equal to " + result);
+                Console.WriteLine(firstNumber + " " + operation + " " + secondNumber + " is equal to " + result);
                 Console.ReadKey();
             } catch (Exception ex)
             {
@@ -58,23 +59,23 @@ namespace SimpleCalculator
                 {
                     case "+":
                     case "plus":
-                        return " plus ";
+                        return "plus";
                         break;
                     case "-":
                     case "minus":
-                        return " minus ";
+                        return "minus";
                         break;
                     case "*":
                     case "times":
-                        return " times ";
+                        return "times";
                         break;
                     case "/":
                     case "divide":
-                        return " divided by ";
+                        return "divided by";
                         break;
                     case "^":
                     case "exponent":
-                        return " to the power of ";
+                        return "to the power of";
                         break;
                     default:
                         Console.WriteLine("enter a valid operation");
