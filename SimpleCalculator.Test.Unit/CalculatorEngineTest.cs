@@ -14,7 +14,7 @@ namespace SimpleCalculator.Test.Unit
 
             int number1 = 1;
             int number2 = 2;
-            double result = _calculatorEngine.Calculate("add", number1, number2);
+            double result = _calculatorEngine.Calculate("plus", number1, number2);
             Assert.AreEqual(3, result);
 
         }
@@ -25,8 +25,20 @@ namespace SimpleCalculator.Test.Unit
 
             int number1 = 1;
             int number2 = 2;
-            double result = _calculatorEngine.Calculate("+", number1, number2);
+            double result = _calculatorEngine.Calculate("plus", number1, number2);
             Assert.AreEqual(3, result);
+
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(DivideByZeroException))]
+        public void DivideByZeroTest()
+        {
+
+            int number1 = 1;
+            int number2 = 0;
+            double result = _calculatorEngine.Calculate("divided by", number1, number2);
+           
 
         }
     }

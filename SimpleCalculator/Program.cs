@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
 
 
 namespace SimpleCalculator
@@ -10,16 +12,24 @@ namespace SimpleCalculator
             try
             {
 
-
                 CalculatorEngine calculatorEngine = new CalculatorEngine();
 
                 double firstNumber = GetValidNumber("Enter the first number: ");
                 double secondNumber = GetValidNumber("Enter the second number: ");
                 string operation = GetValidOperation();
-
+                if (operation == "divided by")
+                {
+                   while (secondNumber == 0)
+                    {
+                        Console.WriteLine("Change numerical value to something other than 0");
+                        secondNumber = GetValidNumber("Enter the second number: ");
+                    }
+                }
                 double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
 
-                Console.WriteLine(firstNumber + " " + operation + " " + secondNumber + " is equal to " + result);
+                Console.WriteLine(firstNumber + " " + operation + " " + secondNumber + " is equal to " + $"{result:F2}");
+               
+
                 Console.ReadKey();
             } catch (Exception ex)
             {
