@@ -22,18 +22,15 @@ namespace SimpleCalculator
 
                 case "/":
                 case "divide":
-                case "division":
                     result = argFirstNumber / argSecondNumber;
                     break;
 
                 case "*":
                 case "multiply":
-                case "multiplication":
                     result = argFirstNumber * argSecondNumber;
                     break;
 
                 case "^":
-                case "power of":
                 case "exponent":
                     result = Math.Pow(argFirstNumber, argSecondNumber);
                     break;

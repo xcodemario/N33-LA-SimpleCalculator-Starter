@@ -71,8 +71,9 @@ namespace SimpleCalculator
                     case "/":
                     case "divide":
                         return "/";
+                        break;
                     case "^":
-                    case "expnent":
+                    case "exponent":
                         break;
                     default:
                         Console.WriteLine("enter a valide operation");
