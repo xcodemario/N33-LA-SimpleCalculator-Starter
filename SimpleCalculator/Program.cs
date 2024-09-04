@@ -24,7 +24,7 @@ namespace SimpleCalculator
                 }
 
                 double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
-                string formattedString= string.Format("{0} {1} {2} is equal to {3}", firstNumber, operation ,secondNumber, result);
+                string formattedString= string.Format("{0} {1} {2} is equal to {3:F2}", firstNumber, operation ,secondNumber, result);
                 Console.WriteLine(formattedString);
                 Console.ReadKey();
             } catch (Exception ex)
