@@ -8,26 +8,49 @@ namespace SimpleCalculator
         {
             try
             {
-                // Class to convert user input
-                InputConverter inputConverter = new InputConverter();
 
-                // Class to perform actual calculations
+
                 CalculatorEngine calculatorEngine = new CalculatorEngine();
-                
-                double firstNumber = inputConverter.ConvertInputToNumeric(Console.ReadLine());
-                double secondNumber = inputConverter.ConvertInputToNumeric(Console.ReadLine());
-                string operation = Console.ReadLine();
+
+                double firstNumber = GetValidNumber("Enter the first number: ");
+                double secondNumber = GetValidNumber("Enter the second number: ");
+                string operation = GetValidOperation();
 
                 double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
 
-                Console.WriteLine(result);
+                Console.WriteLine("Result: " + result);
 
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 // Normally, we'd log this error to a file.
                 Console.WriteLine(ex.Message);
             }
+        }
 
+        public static double GetValidNumber(string numberMessage)
+        {
+            double number;
+            while (true)
+            {
+                Console.Write(numberMessage);
+                string input = Console.ReadLine();
+                try
+                {
+                    number = InputConverter.ConvertInputToNumeric(input);
+                    break;
+                }
+                catch (ArgumentException)
+                {
+                    Console.WriteLine("enter a valide numeric value.");
+                }
+            }
+            return number;
+        }
+        public static string GetValidOperation()
+        {
+            return "0";
         }
     }
 }
+
