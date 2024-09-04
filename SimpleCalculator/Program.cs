@@ -23,7 +23,7 @@ namespace SimpleCalculator
             }
             catch (Exception ex)
             {
-                // Normally, we'd log this error to a file.
+       
                 Console.WriteLine(ex.Message);
             }
         }
@@ -49,7 +49,30 @@ namespace SimpleCalculator
         }
         public static string GetValidOperation()
         {
-            return "0";
+            while (true)
+            {
+                Console.Write("Enter the operation (+, -, *, /,^, plus, minus, times, divide, exponent): ");
+                string operation = Console.ReadLine();
+
+                switch (operation)
+                {
+                    case "+":
+                    case "plus":
+                        return "+";
+                    case "-":
+                    case "minus":
+                        return "-";
+                    case "*":
+                    case "times":
+                        return "*";
+                    case "/":
+                    case "divide":
+                        return "/";
+                    default:
+                        Console.WriteLine("enter a valide operation");
+                        break;
+                }
+            }
         }
     }
 }
