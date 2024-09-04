@@ -2,11 +2,18 @@
 
 namespace SimpleCalculator
 {
-    public class InputConverter
+    public static class InputConverter
     {
-        public double ConvertInputToNumeric(string argTextInput)
+        public static double ConvertInputToNumeric(string argTextInput)
         {
-            return 0;
+            if (double.TryParse(argTextInput, out double convertedNumber))
+            {
+                return convertedNumber;
+            }
+            else
+            {
+                throw new ArgumentException("Not a numeric value.");
+            }
         }
     }
 }
