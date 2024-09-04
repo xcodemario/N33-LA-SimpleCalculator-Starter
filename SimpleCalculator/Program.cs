@@ -20,8 +20,7 @@ namespace SimpleCalculator
 
                 Console.WriteLine("Result: " + result);
 
-            }
-            catch (Exception ex)
+            } catch (Exception ex)
             {
                 // Normally, we'd log this error to a file.
                 Console.WriteLine(ex.Message);
@@ -53,3 +52,4 @@ namespace SimpleCalculator
         }
     }
 }
+
