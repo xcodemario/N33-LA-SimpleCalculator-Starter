@@ -58,22 +58,23 @@ namespace SimpleCalculator
                 {
                     case "+":
                     case "plus":
-                        return "+";
+                        return "plus";
                         break;
                     case "-":
                     case "minus":
-                        return "-";
+                        return "minus";
                         break;
                     case "*":
                     case "times":
-                        return "*";
+                        return "times";
                         break;
                     case "/":
                     case "divide":
-                        return "/";
+                        return "divided by";
                         break;
                     case "^":
                     case "exponent":
+                        return "to the power of";
                         break;
                     default:
                         Console.WriteLine("enter a valide operation");
