@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace SimpleCalculator
-{
+{  
     class Program
     {
         static void Main(string[] args)
@@ -9,14 +9,13 @@ namespace SimpleCalculator
             try
             {
 
-
-                CalculatorEngine calculatorEngine = new CalculatorEngine();
+                CalculatorEngine _calculatorEngine = new CalculatorEngine();
 
                 double firstNumber = GetValidNumber("Enter the first number: ");
                 double secondNumber = GetValidNumber("Enter the second number: ");
                 string operation = GetValidOperation();
 
-                double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
+                double result = _calculatorEngine.Calculate(operation, firstNumber, secondNumber);
 
                 Console.WriteLine(firstNumber + operation + secondNumber + " is equal to " + result);
                 Console.ReadKey();

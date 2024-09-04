@@ -39,9 +39,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CalculationOperations">
-      <HintPath>..\CalculationOperations\obj\Release\CalculationOperations.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.2.1.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
@@ -60,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CalculationOperations\CalculationOperations.csproj">
+      <Project>{ad933fca-2031-4b9f-ba03-c5de6e3bb92b}</Project>
+      <Name>CalculationOperations</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SimpleCalculator\SimpleCalculator.csproj">
       <Project>{5b1e5e51-a8d6-4a82-8344-831c86cc2468}</Project>
       <Name>SimpleCalculator</Name>
