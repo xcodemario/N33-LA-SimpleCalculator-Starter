@@ -6,35 +6,31 @@ namespace SimpleCalculator
     {
         public double Calculate(string argOperation, double argFirstNumber, double argSecondNumber)
         {
-            double result = 0;
+            double result;
             switch (argOperation) {
 
-                case "+":
-                case "add":
+                case "plus":
                     result = argFirstNumber + argSecondNumber;
                     break;
 
-
-                case "-":
                 case "minus":
                     result = argFirstNumber - argSecondNumber;
                     break;
 
-                case "/":
-                case "divide":
+                case "divided by":
                     result = argFirstNumber / argSecondNumber;
                     break;
 
-                case "*":
-                case "multiply":
+                case "times":
                     result = argFirstNumber * argSecondNumber;
                     break;
 
-                case "^":
-                case "exponent":
+                case "to the power of":
                     result = Math.Pow(argFirstNumber, argSecondNumber);
                     break;
-
+                default:
+                    result = 0;
+                    break;
                 }
 
                 return result;
