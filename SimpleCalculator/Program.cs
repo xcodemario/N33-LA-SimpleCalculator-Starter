@@ -22,11 +22,11 @@ namespace SimpleCalculator
 
                 double result = _calculatorEngine.Calculate(operation, firstNumber, secondNumber);
 
-                Console.WriteLine(firstNumber + " " + operation + " " + secondNumber + " is equal to " + result);
 
-                StringBuilder sb = new StringBuilder();
-                sb.AppendFormat("{0} {1} {2} is equal to {3:F2}.", firstNumber, operation, secondNumber, result);
+                string sb = String.Format("{0} {1} {2} is equal to {3:F2}", firstNumber, secondNumber, operation, result);
 
+                
+                Console.WriteLine(sb);
 
                 Console.ReadKey();
             } catch (Exception ex)
