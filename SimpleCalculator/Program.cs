@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 
 namespace SimpleCalculator
@@ -16,9 +17,17 @@ namespace SimpleCalculator
                 double secondNumber = GetValidNumber("Enter the second number: ");
                 string operation = GetValidOperation();
 
+               
+
+
                 double result = _calculatorEngine.Calculate(operation, firstNumber, secondNumber);
 
                 Console.WriteLine(firstNumber + " " + operation + " " + secondNumber + " is equal to " + result);
+
+                StringBuilder sb = new StringBuilder();
+                sb.AppendFormat("{0} {1} {2} is equal to {3:F2}.", firstNumber, operation, secondNumber, result);
+
+
                 Console.ReadKey();
             } catch (Exception ex)
             {
