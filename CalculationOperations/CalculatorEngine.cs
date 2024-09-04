@@ -32,7 +32,7 @@ namespace SimpleCalculator
                     result = argFirstNumber * argSecondNumber;
                     break;
 
-                case "power to":
+                case "^":
                 case "power of":
                 case "exponent":
                     result = Math.Pow(argFirstNumber, argSecondNumber);
