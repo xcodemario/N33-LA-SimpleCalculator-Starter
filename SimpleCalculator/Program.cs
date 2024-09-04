@@ -18,8 +18,8 @@ namespace SimpleCalculator
 
                 double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
 
-                Console.WriteLine("Result: " + result);
-
+                Console.WriteLine(firstNumber + operation + secondNumber + " is equal to " + result);
+                Console.ReadKey();
             } catch (Exception ex)
             {
        
@@ -41,7 +41,8 @@ namespace SimpleCalculator
                 }
                 catch (ArgumentException)
                 {
-                    Console.WriteLine("enter a valide numeric value.");
+                    Console.WriteLine("enter a valid numeric value.");
+                    
                 }
             }
             return number;
@@ -58,18 +59,19 @@ namespace SimpleCalculator
                     case "+":
                     case "plus":
                         return "+";
+                        break;
                     case "-":
                     case "minus":
                         return "-";
+                        break;
                     case "*":
                     case "times":
                         return "*";
+                        break;
                     case "/":
                     case "divide":
                         return "/";
-                    case "^":
-                    case "exponent":
-                        default:
+                    default:
                         Console.WriteLine("enter a valide operation");
                         break;
                 }
