@@ -4,17 +4,17 @@ namespace SimpleCalculator
 {
     public class CalculatorEngine
     {
-        public double Calculate (string argOperation, double argFirstNumber, double argSecondNumber)
+        public double Calculate(string argOperation, double argFirstNumber, double argSecondNumber)
         {
             double result = 0;
             switch (argOperation) {
 
-                case "+": 
+                case "+":
                 case "add":
                     result = argFirstNumber + argSecondNumber;
                     break;
-            
-            
+
+
                 case "-":
                 case "minus":
                     result = argFirstNumber - argSecondNumber;
@@ -35,12 +35,12 @@ namespace SimpleCalculator
                 case "power to":
                 case "power of":
                 case "exponent":
-
+                    result = Math.Pow(argFirstNumber, argSecondNumber);
                     break;
 
-            }
+                }
 
-            return result;
+                return result;
+            }
         }
     }
-}
