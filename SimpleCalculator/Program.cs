@@ -20,8 +20,7 @@ namespace SimpleCalculator
 
                 Console.WriteLine("Result: " + result);
 
-            }
-            catch (Exception ex)
+            } catch (Exception ex)
             {
        
                 Console.WriteLine(ex.Message);
